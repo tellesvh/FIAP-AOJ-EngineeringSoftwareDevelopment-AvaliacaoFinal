@@ -1,0 +1,31 @@
+# Dependências
+/node_modules
+
+# Build
+/dist
+
+# Banco de dados SQLite (gerado em runtime)
+*.sqlite
+*.sqlite-journal
+
+# Cobertura de testes
+/coverage
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
