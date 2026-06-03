@@ -26,10 +26,10 @@ export class HealthRecord {
   appliedAt: string;
 
   @Column({ nullable: true })
-  veterinarianId: string;
+  veterinarianId: string | null;
 
   @Column({ nullable: true })
-  notes: string;
+  notes: string | null;
 
   @CreateDateColumn()
   createdAt: Date;

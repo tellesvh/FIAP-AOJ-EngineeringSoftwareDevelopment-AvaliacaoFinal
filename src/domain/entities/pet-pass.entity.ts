@@ -26,11 +26,11 @@ export class PetPass {
 
   /** Motivo do status Inapto (ComplianceReprovado), quando aplicável. */
   @Column({ nullable: true })
-  reason: string;
+  reason: string | null;
 
   /** Data a partir da qual o animal estará Apto, quando Inapto. */
   @Column({ type: 'date', nullable: true })
-  releaseDate: string;
+  releaseDate: string | null;
 
   /** Código do destino para o qual o compliance foi avaliado (ex: "BR", "EU", "JP").
    * Cada código possui um período de carência sanitária específico. */
