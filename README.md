@@ -260,10 +260,8 @@ src/
 │   ├── database/                   # Configuração e DatabaseSeeder
 │   └── repositories/               # Implementações concretas dos repositórios
 ├── presentation/                   # Camada HTTP (NestJS)
-│   ├── controllers/                # PetsController, PetPassController
-│   ├── guards/                     # JwtAuthGuard
-│   └── strategies/                 # JwtStrategy
-└── modules/                        # Módulos NestJS (AuthModule, PetsModule, PetPassModule)
+│   └── controllers/                # PetsController, PetPassController
+└── modules/                        # Módulos NestJS (PetsModule, PetPassModule)
 
 test/
 ├── unit/                           # Testes unitários com mocks
