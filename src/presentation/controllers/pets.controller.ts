@@ -25,9 +25,6 @@ import {
  *
  * Padrão GRASP Controller: ponto de entrada HTTP para operações com a entidade Pet e
  * RegistroSanitario; delega toda lógica de negócio aos repositórios e use cases.
- *
- * Autenticação: adicione @UseGuards(JwtAuthGuard) na classe ou por rota
- * para exigir token Bearer em produção.
  */
 @Controller('pets')
 export class PetsController {

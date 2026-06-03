@@ -23,9 +23,6 @@ import {
  * Padrão GRASP Controller: único ponto de entrada HTTP para operações
  * do Smart Pet Pass; delega toda lógica de negócio aos use cases,
  * sem implementar regras de compliance diretamente.
- *
- * Autenticação: adicione @UseGuards(JwtAuthGuard) na classe ou por rota
- * para exigir token Bearer em produção.
  */
 @Controller()
 export class PetPassController {
@@ -34,7 +31,7 @@ export class PetPassController {
     private readonly evaluateComplianceUseCase: EvaluateComplianceUseCase,
     @Inject(PET_PASS_REPOSITORY)
     private readonly petPassRepository: IPetPassRepository,
-  ) {}
+  ) { }
 
   /**
    * Emite o Smart Pet Pass para um Pet e Destino informados.
