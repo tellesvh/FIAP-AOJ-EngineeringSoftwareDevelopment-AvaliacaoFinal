@@ -24,7 +24,7 @@ export class PetPass {
   @Column({ type: 'varchar' })
   complianceStatus: ComplianceStatusValue;
 
-  /** Motivo do status Inapto (ComplianceReprovado), quando aplicável. */
+  /** Motivo do status Inapto (INELIGIBLE), quando aplicável. */
   @Column({ type: 'varchar', nullable: true })
   reason: string | null;
 

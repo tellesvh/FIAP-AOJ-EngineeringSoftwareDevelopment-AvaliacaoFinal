@@ -35,7 +35,7 @@ export class PetPassController {
 
   /**
    * Emite o Smart Pet Pass para um Pet e Destino informados.
-   * Dispara o evento PetPassEmitido (Apto) ou ComplianceReprovado (Inapto).
+   * Avalia o StatusCompliance (Apto/Inapto) e persiste o PetPass resultante.
    */
   @Post('pets/:petId/petpass')
   @HttpCode(HttpStatus.OK)
