@@ -25,7 +25,7 @@ export class PetPass {
   complianceStatus: ComplianceStatusValue;
 
   /** Motivo do status Inapto (ComplianceReprovado), quando aplicável. */
-  @Column({ nullable: true })
+  @Column({ type: 'varchar', nullable: true })
   reason: string | null;
 
   /** Data a partir da qual o animal estará Apto, quando Inapto. */

@@ -25,10 +25,10 @@ export class HealthRecord {
   @Column({ type: 'date' })
   appliedAt: string;
 
-  @Column({ nullable: true })
+  @Column({ type: 'varchar', nullable: true })
   veterinarianId: string | null;
 
-  @Column({ nullable: true })
+  @Column({ type: 'varchar', nullable: true })
   notes: string | null;
 
   @CreateDateColumn()
