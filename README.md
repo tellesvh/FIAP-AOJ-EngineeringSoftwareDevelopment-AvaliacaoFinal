@@ -101,6 +101,8 @@ Na inicialização, as **RegraDestino** (BR, EU, JP) são populadas automaticame
 
 ### 1. Cadastrar um Pet
 
+Valores aceitos para `speciesType`: `"DOG"` ou `"CAT"`.
+
 ```bash
 curl -X POST http://localhost:3000/pets \
   -H "Content-Type: application/json" \
@@ -125,6 +127,8 @@ curl -X POST http://localhost:3000/pets \
 ```
 
 ### 2. Registrar vacina antirrábica
+
+Valores aceitos para `recordType`: `"RABIES_VACCINE"`, `"SEROLOGY"`, `"DEWORMER"`, `"FLEA_TREATMENT"`.
 
 ```bash
 curl -X POST http://localhost:3000/pets/{pet_id}/health-records \
@@ -197,7 +201,7 @@ curl -X POST http://localhost:3000/pets/{pet_id}/petpass \
 
 ## Suite de Testes
 
-O projeto possui três conjuntos de testes cobrindo a pirâmide de testes:
+O projeto possui três conjuntos de testes cobrindo a pirâmide de testes (**25 testes no total**):
 
 ```
 test/
@@ -205,7 +209,7 @@ test/
     compliance-engine.service.spec.ts   # 8 testes — invariantes I1 (BR), I2 (EU), I3 (JP)
     emit-petpass.use-case.spec.ts       # 3 testes — orquestração do caso de uso com mocks
   integration/
-    pet-pass.controller.spec.ts         # 3 testes — fluxo HTTP completo com banco em memória
+    pet-pass.controller.spec.ts         # 14 testes — cobertura completa dos 7 endpoints da API
 ```
 
 ### Executar os testes
