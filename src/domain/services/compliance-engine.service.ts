@@ -1,5 +1,5 @@
 import { Injectable, Inject } from '@nestjs/common';
-import { differenceInDays } from '../utils/date.utils';
+import { differenceInDays, parseLocalDate } from '../utils/date.utils';
 import { ComplianceStatus } from '../value-objects/compliance-status.vo';
 import { DestinationRule } from '../entities/destination-rule.entity';
 import { HealthRecord } from '../entities/health-record.entity';
@@ -80,7 +80,7 @@ export class ComplianceEngineService {
 
     const vaccineDaysAgo = differenceInDays(
       referenceDate,
-      new Date(lastVaccine.appliedAt),
+      parseLocalDate(lastVaccine.appliedAt),
     );
 
     if (vaccineDaysAgo < rule.waitingPeriodDays) {
@@ -104,7 +104,7 @@ export class ComplianceEngineService {
 
       const serologyDaysAgo = differenceInDays(
         referenceDate,
-        new Date(lastSerology.appliedAt),
+        parseLocalDate(lastSerology.appliedAt),
       );
 
       if (serologyDaysAgo < rule.serologyWaitingPeriodDays) {
