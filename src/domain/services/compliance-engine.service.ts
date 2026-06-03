@@ -70,7 +70,7 @@ export class ComplianceEngineService {
     rule: DestinationRule,
     referenceDate: Date = new Date(),
   ): ComplianceStatus {
-    const lastVaccine = this.getLatestRecord(records, RecordType.VACCINE);
+    const lastVaccine = this.getLatestRecord(records, RecordType.RABIES_VACCINE);
 
     if (!lastVaccine) {
       return ComplianceStatus.ineligible(
